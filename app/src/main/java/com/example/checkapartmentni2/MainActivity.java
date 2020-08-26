@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private EditText txtnombre, txtpasword;
     private Button button;
+    private int count =0;
 
    // public MainActivity(EditText txtnombre) {
     //    this.txtnombre = txtnombre;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EnviarPrincipal(view);
-                Toast.makeText(MainActivity.this, "Felicidades a Ingresado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Llevas" + count + "Intentos. Solo tienes 3", Toast.LENGTH_SHORT).show();
             }
 
             public void EnviarPrincipal(View view) {
@@ -41,14 +43,21 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Campo Contraseña Vacio", Toast.LENGTH_LONG).show();
                     } else {
                         pasword = txtpasword.getText().toString();
-                        if (pasword.equals("123pass")) {
-                            Intent iniciar = new Intent(MainActivity.this, HintActivity.class);
-                            startActivity(iniciar);
-                            
-                        }
+                        if (pasword.equals("123pass") && count < 4)
+                            next();
+                        count++;
+
                     }
                 }
             }
-        });
+            });
+        }
+
+
+    private void next() {
+        Intent iniciar = new Intent(MainActivity.this, HintActivity.class);
+        count=0;
+        startActivity(iniciar);
     }
-}
+    }
+
