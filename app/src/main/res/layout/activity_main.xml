@@ -14,7 +14,6 @@
         android:ems="10"
         android:hint="@string/txtcorreo"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
