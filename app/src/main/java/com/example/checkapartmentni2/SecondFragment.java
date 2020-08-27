@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.bumptech.glide.Glide;
 import com.example.checkapartmentni2.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
@@ -28,16 +29,25 @@ public class SecondFragment extends Fragment {
             nombre= getArguments().getString("Nombre");
             numero= getArguments().getString("Numero");
             direccion= getArguments().getString("Direccion");
-            url = getArguments().getString("Url");
+            url = getArguments().getString("URL");
         }
     }
 
-    public View onCreateView(
+    public void Guardar (){
+
+    }
+
+
+
+
+       public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
         mBinding = FragmentSecondBinding.inflate(inflater,container,false);
+           Glide.with(getContext()).load(url).into(mBinding.i2f);
+
 
         return mBinding.getRoot();
     }
