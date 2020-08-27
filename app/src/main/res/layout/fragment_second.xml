@@ -15,10 +15,9 @@
         <ImageView
             android:id="@+id/i2f"
             android:layout_width="match_parent"
-            android:layout_height="148dp"
-            tools:src="@tools:sample/avatars"
+            android:layout_height="94dp"
             tools:ignore="ContentDescription"
-            />
+            tools:src="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/tvf1"
