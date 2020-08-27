@@ -50,10 +50,10 @@ public class FirstFragment extends Fragment implements Adapter.Check {
     @Override
     public void passElement(Apartment apartment) {
         Bundle mbundle = new Bundle();
-        mbundle.putString("Nombre del Edificio", apartment.getBuildingName());
-        mbundle.putString("Numero del departamento",apartment.getUnitId());
-        mbundle.putString("Direccion del Departamento",apartment.getAddress());
-        mbundle.putString("URL de Imagen", apartment.getUrlImageBuilding());
+        mbundle.putString("Nombre", apartment.getBuildingName());
+        mbundle.putString("Numero",apartment.getUnitId());
+        mbundle.putString("Direccion",apartment.getAddress());
+        mbundle.putString("URL", apartment.getUrlImageBuilding());
         Navigation.findNavController(mBinding.getRoot()).navigate(R.id.action_FirstFragment_to_SecondFragment,mbundle);
     }
 }

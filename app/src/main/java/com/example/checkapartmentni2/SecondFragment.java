@@ -6,18 +6,40 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.checkapartmentni2.databinding.FragmentSecondBinding;
+
 public class SecondFragment extends Fragment {
+    private String nombre;
+    private String numero;
+    private String direccion;
+    private String url;
+
+
+    private FragmentSecondBinding mBinding;
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() !=null) {
+            nombre= getArguments().getString("Nombre");
+            numero= getArguments().getString("Numero");
+            direccion= getArguments().getString("Direccion");
+            url = getArguments().getString("Url");
+        }
+    }
+
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        mBinding = FragmentSecondBinding.inflate(inflater,container,false);
+
+        return mBinding.getRoot();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

@@ -7,7 +7,7 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="previous">Pagina anterior</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
@@ -15,6 +15,20 @@
     <string name="txttexto1">Edificio</string>
     <string name="txttexto2">Depto</string>
     <string name="txttexto3">Direccion</string>
+
+    <string name="tvf4">Luces del Departamento</string>
+    <string name="tvf5">Elementos del baño</string>
+    <string name="tvf6">Elementos de la cocina</string>
+    <string name="tvf7">Elementos del dormitorio</string>
+    <string name="tvf8">Estado general de las terminaciones= </string>
+    <string name="tvf9">Normal</string>
+    <string name="tvf10">Regular</string>
+    <string name="tvf11">Malas</string>
+
+    <string name="txtpuntaje">Puntaje obtenido</string>
+    <string name="Button2">Guardar</string>
+    <string name="Button3">Enviar Alerta</string>
+
 
 
 
