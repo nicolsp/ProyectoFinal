@@ -47,6 +47,10 @@ public class SecondFragment extends Fragment {
         // Inflate the layout for this fragment
         mBinding = FragmentSecondBinding.inflate(inflater,container,false);
            Glide.with(getContext()).load(url).into(mBinding.i2f);
+
+           mBinding.tvf1.setText(nombre);
+           mBinding.tvf2.setText(numero);
+           mBinding.tvf3.setText(direccion);
            mBinding.rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                @Override
                public void onCheckedChanged(RadioGroup radioGroup, int i) {
